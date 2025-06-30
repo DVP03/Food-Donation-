@@ -4,15 +4,15 @@ from pymongo import MongoClient
 from bson import ObjectId
 from typing import List
 
-# ✅ MongoDB Connection (Localhost)
+#  MongoDB Connection (Localhost)
 client = MongoClient("mongodb://localhost:27017/")
 db = client.feed
 collection = db.collection
 
-# ✅ FastAPI App
+#  FastAPI App
 app = FastAPI()
 
-# ✅ Pydantic model for validation
+#  Pydantic model for validation
 class User(BaseModel):
     Username: str
     Password: str
